@@ -15,7 +15,7 @@ public class Job {
     private String location;
 
     public Job(){
-        
+
     }
 
     public Long getId() {
