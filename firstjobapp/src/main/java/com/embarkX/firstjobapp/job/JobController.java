@@ -1,5 +1,6 @@
 package com.embarkX.firstjobapp.job;
 
+import com.embarkX.firstjobapp.company.Company;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +28,7 @@ public class JobController {
     @PostMapping
     public ResponseEntity<String> createJob(@RequestBody Job job){
         jobService.createJob(job);
+//        Company c = job.getCompany();
         return new ResponseEntity<>("Job added successfully", HttpStatus.OK);
     }
 
