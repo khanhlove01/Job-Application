@@ -20,6 +20,14 @@ public class Review {
     public Review() {
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     public Long getId() {
         return id;
     }
