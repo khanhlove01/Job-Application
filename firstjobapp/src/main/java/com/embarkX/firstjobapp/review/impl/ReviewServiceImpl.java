@@ -45,4 +45,15 @@ public class ReviewServiceImpl implements ReviewService {
                 .findFirst()
                 .orElse(null);
     }
+
+    @Override
+    public boolean updateReview(Long companyId, Long reviewId, Review review) {
+        if(companyService.getCompanyById(companyId) != null){
+            review.setCompany(companyService.getCompanyById(companyId));
+            review.setId(reviewId);
+            reviewRepository.save(review);
+            return true;
+        }
+        return false;
+    }
 }
